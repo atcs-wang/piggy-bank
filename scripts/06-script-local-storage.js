@@ -27,7 +27,7 @@ function updateBalance(amount, isNegative){
     }
     balanceAmountElm.textContent = balance.toFixed(2);
     //Use localStorage to save the updated balance
-    localStorage.setItem("balance", balance);
+    localStorage.setItem("savedBalance", balance);
 }
 
 pennyElm.addEventListener("click", function (event) {
@@ -74,3 +74,13 @@ document.addEventListener("keydown", function (event) {
     }
 });
 
+/* Run at the start to load previously stored item*/
+let balance = Number(localStorage.getItem("savedBalance"));
+// Note that getItem returns null if no such item stored.
+// However, Number converts null into 0
+balanceAmountElm.textContent = balance.toFixed(2);
+if (balance < 0){
+    balanceElm.classList.add("negative");
+} else {
+    balanceElm.classList.remove("negative");
+}

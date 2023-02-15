@@ -9,9 +9,6 @@ const quarterElm = document.querySelector("#quarter");
 const coinAddSoundElm = document.querySelector("audio.coin-add");
 const coinRemoveSoundElm = document.querySelector("audio.coin-remove");
 
-const historyElm = document.querySelector(".history");
-
-
 function updateBalance(amount, isNegative){
 
     let balance = Number(balanceAmountElm.textContent);

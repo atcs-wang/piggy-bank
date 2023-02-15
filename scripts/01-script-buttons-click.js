@@ -9,8 +9,6 @@ const quarterElm = document.querySelector("#quarter");
 const coinAddSoundElm = document.querySelector("audio.coin-add");
 const coinRemoveSoundElm = document.querySelector("audio.coin-remove");
 
-const historyElm = document.querySelector(".history");
-
 //Technique #1: Write a named function, then register as event listener
 
 function addPenny() {
