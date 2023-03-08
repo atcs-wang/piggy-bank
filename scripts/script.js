@@ -37,6 +37,22 @@ function updateBalance(amount, isNegative){
     localStorage.setItem("savedBalance", balance);
 }
 
+pennyElm.addEventListener("click", function (event) {
+    updateBalance(0.01, event.shiftKey);
+});
+
+nickelElm.addEventListener("click", function (event) {
+    updateBalance(0.05, event.shiftKey);
+});
+
+dimeElm.addEventListener("click", function (event) {
+    updateBalance(0.10, event.shiftKey);
+});
+
+quarterElm.addEventListener("click", function (event) {
+    updateBalance(0.25, event.shiftKey);
+});
+
 document.addEventListener("keydown", function (event) {
     if (event.repeat) { 
         return
